@@ -1,5 +1,6 @@
 '''
-COMMAND: python3 lesson1.py
+ROOT COMMAND: python3 lesson1.py
+USER COMMAND: ls
 
 DESCRIPTION:
 While running some commands (eg, “ls”) in another session. It should print “Hello, World!” for new processes. 
