@@ -1,4 +1,7 @@
 '''
+ROOT COMMAND: python3 lesson4.py
+USER COMMAND: sync;sync;sync or sync;sync;sync;sync
+
    Program Description:
    This program measures the time elapsed since the last call to the do_sync function and prints output if it was called within the past second. 
    Multiple consecutive calls to do_sync will print output for the 2nd and 3rd calls, simulating the behavior of 'sync;sync;sync'.
