@@ -1,6 +1,24 @@
-#!/usr/bin/python
-#
-# Tracing syscalls by using BPF_PERF_OUTPUT.
+'''
+Example Usage:
+- Trace the "mkdir" system call
+
+ROOT COMMAND: python lesson5.py mkdir
+USER COMMAND: mkdir 
+
+Program Description:
+This Python script utilizes the BCC (BPF Compiler Collection) library to trace a specific system call and print information when that system call is invoked. It captures details such as the timestamp, process ID, and process name.
+
+Key Components:
+1. Define the BPF program: The script defines a BPF program using C-like code. The program collects data about the invoked system call, including process information and the timestamp. The data is structured using a C struct and sent to a BPF_PERF_OUTPUT named "events" for further processing.
+2. Load the BPF program: The BPF program is loaded using the BCC library, and it is attached to the specified system call using attach_kprobe.
+3. Process and print events: The script continuously polls for events and processes them using the print_event function. It calculates the time elapsed since the start of tracing and prints information about the invoked system call, including the timestamp, process name, process ID, and a custom message.
+4. User Input Handling: The script checks for proper command-line arguments and provides usage instructions. It also handles keyboard interrupts (Ctrl-C) to gracefully exit the program.
+
+
+$ python script.py execve
+$ python script.py unlink
+$ python script.py read
+'''
 
 from bcc import BPF
 import sys
