@@ -1,4 +1,4 @@
-# [Workshop] Hack in Paris
+# [Workshop]
 ## eBPFShield - Advanced IP-Intelligence & DNS Monitoring using eBPF
 
 This workshop will provide you with hands-on experience in tracing Linux system calls using BCC (BPF Compiler Collection). In this workshop, you will learn how to use BCC, a powerful tool for tracing and analyzing the behavior of Linux programs at a system call level. BCC allows you to gather insights into system activity, performance bottlenecks, and more. Additionally, we'll showcase advanced use cases from eBPFShield, covering Advanced IP-Intelligence & DNS Monitoring using eBPF.
